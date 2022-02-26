@@ -9,19 +9,19 @@ using System.Threading.Tasks;
 
 namespace ServiceBus.Consumer
 {
-    internal class CosmosRetrieveService : ICanGetInvoice
+    internal class CosmosRetrieveService : ICanGetPayload
     {
         private readonly Container _container;
         public CosmosRetrieveService(Container container)
         {
             _container = container;
         }
-        public async Task<Invoice> GetAsync(Guid id)
+        public async Task<Payload> GetAsync(Guid id)
         {
-            InvoiceCosmosDto invoiceCosmosDto = await _container.ReadItemAsync<InvoiceCosmosDto>(id.ToString(), new PartitionKey(id.ToString()));
-            var invoice = new Invoice(invoiceCosmosDto.amount, invoiceCosmosDto.siret);
-            return invoice;
+            PayloadCosmosDto payloadCosmosDto = await _container.ReadItemAsync<PayloadCosmosDto>(id.ToString(), new PartitionKey(id.ToString()));
+            var payload = new Payload(payloadCosmosDto.amount, payloadCosmosDto.number);
+            return payload;
         }
     }
-    internal record InvoiceCosmosDto(string id, string siret, double amount);
+    internal record PayloadCosmosDto(string id, string number, double amount);
 }

@@ -16,6 +16,6 @@ namespace ServiceBus.Consumer.Configuration
     {
 
         public static IServiceCollection AddCosmosRetrieveService(this IServiceCollection services) =>
-            services.AddTransient<ICanGetInvoice, CosmosRetrieveService>();
+            services.AddTransient<ICanGetPayload, CosmosRetrieveService>();
     }
 }

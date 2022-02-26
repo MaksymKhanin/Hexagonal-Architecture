@@ -8,31 +8,31 @@ using System.Threading.Tasks;
 
 namespace ServiceBus.Consumer
 {
-    public class Invoice
+    public class Payload
     {
         public double Amount { get; init; }
 
-        public string Siret { get; init; }
+        public string Number { get; init; }
 
-        public Invoice(double amount, string siret)
+        public Payload(double amount, string number)
         {
             if (amount <= 0)
             {
                 throw new Exception("amount should be bigger than 0");
             }
 
-            if (siret.Length != 9)
+            if (number.Length != 9)
             {
-                throw new Exception($"siret length should be 9 characters. Now it is {siret.Length} characters");
+                throw new Exception($"number length should be 9 characters. Now it is {number.Length} characters");
             }
 
-            if (!siret.Contains("#"))
+            if (!number.Contains("#"))
             {
-                throw new Exception("siret should contain # symbol");
+                throw new Exception("number should contain # symbol");
             }
 
             Amount = amount;
-            Siret = siret;
+            Number = number;
         }
     }
 }

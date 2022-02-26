@@ -4,5 +4,5 @@ using System;
 
 namespace ServiceBus.Consumer.DTOs
 {
-    public record GetInvoiceRequestDto(Guid id);
+    public record GetPayloadRequestDto(Guid id);
 }

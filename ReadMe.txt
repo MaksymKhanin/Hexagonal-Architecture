@@ -16,3 +16,6 @@ Azure Service Bus, Azure CosmosDB, Azure Function, Mediator, Mapper
 }
 
 6) All tests pass! Ncrunch test may not be shomn in NCrunch explorer! But in Test explorer is shown well.
+7) In ReadModel you by default is used Azure Function Listener. But also there is custom Azure Service Bus Listener. 
+   So you can opt between them. I fyou want to use custom listener, you need to reference its dependencies from Startup.cs
+   and call its methods respectively.

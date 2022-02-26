@@ -44,6 +44,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messaging", "Messaging\Mess
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventHandler", "EventHandler\EventHandler.csproj", "{B4C0DA4B-274B-4E5D-860F-7755142B6C1E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBus.Consumer", "ServiceBus.Consumer\ServiceBus.Consumer.csproj", "{DC150F83-CFF5-4C27-9F80-480EA78B208B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,6 +104,10 @@ Global
 		{B4C0DA4B-274B-4E5D-860F-7755142B6C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4C0DA4B-274B-4E5D-860F-7755142B6C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4C0DA4B-274B-4E5D-860F-7755142B6C1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC150F83-CFF5-4C27-9F80-480EA78B208B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC150F83-CFF5-4C27-9F80-480EA78B208B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC150F83-CFF5-4C27-9F80-480EA78B208B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC150F83-CFF5-4C27-9F80-480EA78B208B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -121,6 +127,7 @@ Global
 		{C7097C9F-F45E-4AED-B32C-68BF6D97C6CB} = {C8F85994-2BBA-4199-B878-A15EC81D572C}
 		{E84E6579-09D5-4ECA-85A5-CF227858C7FE} = {79EB325F-BC45-44D2-B8BE-2547CE1C1489}
 		{B4C0DA4B-274B-4E5D-860F-7755142B6C1E} = {E708FED0-6CDD-489A-AF02-47E60FD9F69C}
+		{DC150F83-CFF5-4C27-9F80-480EA78B208B} = {E708FED0-6CDD-489A-AF02-47E60FD9F69C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {06E2BDEC-BB2B-4E72-A2DE-FFD4A0F06AE4}

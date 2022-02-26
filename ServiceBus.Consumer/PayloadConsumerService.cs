@@ -12,14 +12,14 @@ using System.Threading.Tasks;
 
 namespace ServiceBus.Consumer
 {
-    class InvoiceConsumerService : BackgroundService
+    class PayloadConsumerService : BackgroundService
     {
         private readonly ISubscriptionClient _subscriptionClient;
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
-        private readonly ICanGetInvoice _cosmosRetrieveService;
+        private readonly ICanGetPayload _cosmosRetrieveService;
 
-        public InvoiceConsumerService(ISubscriptionClient subscriptionClient, IMediator mediator, IMapper mapper, ICanGetInvoice cosmosRetrieveService)
+        public PayloadConsumerService(ISubscriptionClient subscriptionClient, IMediator mediator, IMapper mapper, ICanGetPayload cosmosRetrieveService)
         {
             _subscriptionClient = subscriptionClient;
             _mediator = mediator;
@@ -30,12 +30,12 @@ namespace ServiceBus.Consumer
         {
             _subscriptionClient.RegisterMessageHandler((message, token) =>
                 {
-                    var getInvoiceRequestDto =
-                        JsonConvert.DeserializeObject<GetInvoiceRequestDto>(Encoding.UTF8.GetString(message.Body));
+                    var getPayloadRequestDto =
+                        JsonConvert.DeserializeObject<GetPayloadRequestDto>(Encoding.UTF8.GetString(message.Body));
 
 
-                    //_mediator.Send(_mapper.Map<GetInvoiceRequest>(getInvoiceRequestDto));
-                    _cosmosRetrieveService.GetAsync(getInvoiceRequestDto.id);
+                    //_mediator.Send(_mapper.Map<GetPayloadRequest>(getPayloadRequestDto));
+                    _cosmosRetrieveService.GetAsync(getPayloadRequestDto.id);
 
                     return _subscriptionClient.CompleteAsync(message.SystemProperties.LockToken);
                 },

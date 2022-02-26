@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace ServiceBus.Consumer
 {
-    public interface ICanGetInvoice
+    public interface ICanGetPayload
     {
-        public Task<Invoice> GetAsync(Guid id);
+        public Task<Payload> GetAsync(Guid id);
     }
 }
