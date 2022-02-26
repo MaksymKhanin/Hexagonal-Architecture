@@ -1,5 +1,5 @@
 .Net 5 
-Tests: SpecFlow (SendInvoiceStepsShould), IntegrationTests (SendInvoiceTestsShould), UnitTests
+Tests: SpecFlow (SendPayloadStepsShould), IntegrationTests (SendPayloadTestsShould), UnitTests
 Azure Service Bus, Azure CosmosDB, Azure Function, Mediator, Mapper
 
 1) Setup cosmos db emulator with URL http://localhost:8081
