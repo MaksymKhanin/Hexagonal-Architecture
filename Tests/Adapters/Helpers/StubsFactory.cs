@@ -16,7 +16,7 @@ namespace Adapters.Helpers
             return new SendPayloadCommandDto(Validnumber, ValidAmount);
         }
 
-        public static PayloadObject payloadValidStub()
+        public static PayloadObject PayloadValidStub()
         {
             return new PayloadObject(ValidAmount, Validnumber);
         }

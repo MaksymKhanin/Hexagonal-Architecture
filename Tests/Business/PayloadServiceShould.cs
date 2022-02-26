@@ -11,7 +11,7 @@ using Xunit;
 
 namespace HexagonalApi.Tests.Business
 {
-    public class payloadServiceShould
+    public class PayloadServiceShould
     {
         private readonly PayloadObject _payload;
         private readonly PayloadService _sut;
@@ -19,7 +19,7 @@ namespace HexagonalApi.Tests.Business
         private readonly Mock<ICanSavePayload> _icanSavePayloadServiceMock = new Mock<ICanSavePayload>();
 
 
-        public payloadServiceShould()
+        public PayloadServiceShould()
         {
             _payload = GeneralHelpers.GeneratePayloadMock();
             _sut = new PayloadService(_thirdPartyServiceMock.Object, _icanSavePayloadServiceMock.Object);

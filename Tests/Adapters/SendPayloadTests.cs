@@ -39,7 +39,7 @@ namespace Adapters
         [Fact]
         public async void Test1()
         {
-            var payload = StubsFactory.payloadValidStub();
+            var payload = StubsFactory.PayloadValidStub();
             var result = await _sut.CreateAsync(payload);
 
             var iterator = _container.GetItemQueryIterator<payloadCosmosDto>();
