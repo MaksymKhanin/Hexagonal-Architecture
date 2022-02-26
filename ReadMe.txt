@@ -14,3 +14,5 @@ Azure Service Bus, Azure CosmosDB, Azure Function, Mediator, Mapper
   "number": "#12345678",
   "amount": 67
 }
+
+6) All tests pass! Ncrunch test may not be shomn in NCrunch explorer! But in Test explorer is shown well.
